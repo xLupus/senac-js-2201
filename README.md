@@ -1,2 +1,2 @@
 # senac-js-2201
-Aulas de js e php
+Scripts das aulas de Javascript
