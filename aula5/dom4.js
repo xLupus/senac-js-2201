@@ -54,6 +54,6 @@ let itensImpares = document.querySelectorAll('li:nth-child(odd)');
 
 console.log(itensArray);
 
-for(let i = 1; i <= itensArray.length; i += 2){
+for(let i = 0; i <= itensArray.length; i += 2){
     itensArray[i].style.background = 'red';
 }
