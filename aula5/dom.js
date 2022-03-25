@@ -1,32 +1,20 @@
+//console.log(window);
+
 const p = document.getElementById('paragrafo');
-const titulo = document.querySelector('p');
 
-console.log(titulo);
-p.innerText = 'Meu texto!';
+//p.innerText = "Testando, testando...";
+//p.style.color = 'red';
+//p.style.backgroundColor = '#ccc';
 
-if(confirm('Quer entra com um valor?')){
+let colors = ['blue','red','yellow','#ccc','black','purple'];
 
-    let valor = prompt('Entre com um número de 0 a 10');
+for(i = 0, c = 0; i <= 30; i++, c++){
 
-    if( valor >= 0 && valor <= 10){
+    p.style.color = colors[c];
 
-        for(let i = 0; i <= valor; i++){
-            let oi = p.innerText = "oi = " + i;
-            //42
-            //document.write(oi + "<br>");
-            console.log(oi);
-            
-        }
+    console.log(p.style.color);
 
-        titulo.style.backgroundColor = 'brown';
-    } else {
-
-        p.innerText = 'Valor inválido';
-
-        titulo.style.backgroundColor = 'yellow';
-    }
-
-} else {
-    p.innerText = 'Que pena que você não entrou com um valor :-(';
-    titulo.style.backgroundColor = 'purple';
+    if(c >= 6) c = -1;
 }
+
+
