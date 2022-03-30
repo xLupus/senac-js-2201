@@ -1,19 +1,11 @@
+//tamanho da tela
+const tamanho = `A: ${window.innerHeight} x L: ${window.innerWidth}`;
 
-const p = document.getElementById('paragrafo');
+const navegador = window.navigator; 
 
-p.innerText = "Testando, testando...";
+const paragrafo = document.getElementById('paragrafo');
 
-let valor = parseInt(prompt());
+console.log(navegador);
 
-for(let i = 0; i <= valor; i++){
-    let oi = p.innerText = "oi = " + i;
-    //42
-    //document.write(oi + "<br>");
-    console.log(oi);
-    
-}
+paragrafo.innerText = navegador;
 
-console.log(window);
-
-//confirm(); retorna uma booleana true ou false;
-//console.log(valor);
