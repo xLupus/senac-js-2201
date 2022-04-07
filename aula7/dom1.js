@@ -85,16 +85,16 @@ BTN.addEventListener('click', function(evento){
 
     evento.preventDefault()
 
+    const LISTA = document.querySelector('ul.collection')
+
     const LI = document.createElement('li');
     LI.className= 'collection-item';
     LI.id = 'novo-item';
 
     const TEXTO_USER = document.querySelector('input#task').value
-
     const TEXTO = document.createTextNode(TEXTO_USER)
 
     const LINK = document.createElement('a');
-
     LINK.className = 'delete-item secondary-content';
     LINK.setAttribute('href','#');
 
@@ -104,9 +104,6 @@ BTN.addEventListener('click', function(evento){
     LINK.appendChild(ICON);
     LI.appendChild(TEXTO);
     LI.appendChild(LINK);
-
-    const LISTA = document.querySelector('ul.collection')
-
     LISTA.appendChild(LI)
 
     document.querySelector('input#task').value = ''
