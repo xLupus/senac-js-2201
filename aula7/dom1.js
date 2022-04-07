@@ -78,33 +78,30 @@ function mostraEvento(evento){
 
 const BTN = document.querySelector('input.btn')
 
-console.log(BTN)
-
-
-BTN.addEventListener('click', function(evento){
-
+BTN.addEventListener('click', function(evento)
+{
     evento.preventDefault()
 
-    const LISTA = document.querySelector('ul.collection')
+    const UL = document.querySelector('ul.collection')
 
     const LI = document.createElement('li');
     LI.className= 'collection-item';
     LI.id = 'novo-item';
 
     const TEXTO_USER = document.querySelector('input#task').value
-    const TEXTO = document.createTextNode(TEXTO_USER)
+    const TEXT = document.createTextNode(TEXTO_USER)
 
-    const LINK = document.createElement('a');
-    LINK.className = 'delete-item secondary-content';
-    LINK.setAttribute('href','#');
+    const A = document.createElement('a');
+    A.className = 'delete-item secondary-content';
+    A.setAttribute('href','#');
 
-    const ICON = document.createElement('i');
-    ICON.className = 'fa fa-remove';
+    const I = document.createElement('i');
+    I.className = 'fa fa-remove';
 
-    LINK.appendChild(ICON);
-    LI.appendChild(TEXTO);
-    LI.appendChild(LINK);
-    LISTA.appendChild(LI)
+    A.appendChild(I);
+    LI.appendChild(TEXT);
+    LI.appendChild(A);
+    UL.appendChild(LI)
 
     document.querySelector('input#task').value = ''
 })
