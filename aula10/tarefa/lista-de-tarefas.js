@@ -11,12 +11,15 @@ const CAMPO_TAREFA = document.querySelector('#tarefa')
 function carregaMonitordeEventos(){
 
     //Eventos
+
     document.addEventListener('DOMContentLoaded', pegaTarefa)
     FORMULARIO.addEventListener('submit',adicionaTarefa)
     LISTA.addEventListener('click', apagaTarefa)
     BTN_LIMPAR.addEventListener('click', apagarTodasTarefas)
     FILTRO.addEventListener('keyup', filtrarTarefas)
 }
+
+
 function adicionaTarefa(event){
 
     event.preventDefault()

@@ -1,5 +1,5 @@
-
-new Morris.Line({
+try{
+  new Morris.Linasde({
 
     element: 'linha',
 
@@ -15,28 +15,31 @@ new Morris.Line({
     ykeys: ['value'],
     labels: ['Value']
   });
+}catch(erro){
+  document.write(erro)
+  console.log(erro)
+}
 
 
-  Morris.Bar({
-    element: 'bar',
+new Morris.Bar({
+  element: 'bar',
 
-    data: [
-      { y: '2006', a: 100, b: 90 },
-      { y: '2007', a: 75,  b: 65 },
-      { y: '2008', a: 50,  b: 40 },
-      { y: '2009', a: 75,  b: 65 },
-      { y: '2010', a: 50,  b: 40 },
-      { y: '2011', a: 75,  b: 65 },
-      { y: '2012', a: 100, b: 90 }
-    ],
+  data: [
+    { y: '2006', a: 100, b: 90 },
+    { y: '2007', a: 75,  b: 65 },
+    { y: '2008', a: 50,  b: 40 },
+    { y: '2009', a: 75,  b: 65 },
+    { y: '2010', a: 50,  b: 40 },
+    { y: '2011', a: 75,  b: 65 },
+    { y: '2012', a: 100, b: 90 }
+  ],
 
-    xkey: 'y',
-    ykeys: ['a', 'b'],
-    labels: ['Series A', 'Series B']
-  });
+  xkey: 'y',
+  ykeys: ['a', 'b'],
+  labels: ['Series A', 'Series B']
+});
 
-
-  Morris.Area({
+new Morris.Area({
 
     element: 'area',
 
