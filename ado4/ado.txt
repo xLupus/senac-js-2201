@@ -1,0 +1,25 @@
+Para manipular elementos do DOM e capturar eventos usando Jquery é muito simples.
+
+Diferente do Javascript puro, que é preciso escrever: 
+
+    document.querySelector('tag').addEventListener('tipoDeEvento', function(){
+        BLOCO DE COMANDOS
+    })
+
+    document.querySelector('h1').addEventListener('click', function(){
+        document.querySelector('h1').style.color = 'red'
+    })
+
+No Jquery, é possivel fazer a mesma coisa digitando bem menos
+
+    $('tag').tipoDeEvento(function(){
+        BLOCO DE COMANDOS
+    })
+
+    $('h1').click(function(){
+        $('h1').css({
+            'color': 'red'
+        })
+    })
+
+$() é o equivalente no JS ao querySelector e ao inves de digitar addEventListener basta por depois do $() um ponto ' . ', seguido do evento em forma de funcao.
