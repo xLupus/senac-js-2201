@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background: linear-gradient(131.67deg, #313132 30.66%, #161618 100%);
+}
+.imc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+.imc h1{text-align: center;}
+.imc-input{margin-bottom: 20px;}
+.imc-input input{padding: 10px;}
+.imc button{
+    width: 150px;
+    padding: 10px;
+    align-self: center;
+}
+.imc p {text-align: center;}
