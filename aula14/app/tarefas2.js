@@ -79,6 +79,8 @@ function atualizaTarefaNoBack(tarefa,id){
 
     console.log(tarefaID, tarefa)
 
+    const URL = "http://localhost:8080/senac-js-2201/aula14/app/api/v1/tarefa.php"
+
     let myInit = { method: 'PATCH',
                    headers: {
                             'Accept': 'application/json',
@@ -89,14 +91,14 @@ function atualizaTarefaNoBack(tarefa,id){
                    body: JSON.stringify({descricao: tarefa, imagem: '', id: tarefaID})
                 };
 
-    fetch("http://localhost:8080/senac-js-2201/aula14/app/api/v1/tarefa.php",myInit).then(function(resultado){
+    fetch(URL,myInit).then(function(resultado){
         return resultado.text()
     }).then(function(conteudo){
         console.log(conteudo)
     })
 }
 
-atualizaTarefaNoBack('teste de atualizacao 45', 45)
+//atualizaTarefaNoBack('teste de atualizacao 45', 45)
 
 
 
