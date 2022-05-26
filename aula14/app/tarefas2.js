@@ -66,15 +66,41 @@ function gravaTarefaNoback(tarefa){
                    body: JSON.stringify({descricao: tarefa.value, imagem: ''})
                 };
 
-    
     fetch("http://localhost:8080/senac-js-2201/aula14/app/api/v1/tarefa.php",myInit).then(function(resultado){
         return resultado.text()
     }).then(function(conteudo){
         console.log(conteudo)
     })
-
-
 }
+
+function atualizaTarefaNoBack(tarefa,id){
+
+    let tarefaID = id
+
+    console.log(tarefaID, tarefa)
+
+    let myInit = { method: 'PATCH',
+                   headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                            },
+                   mode: 'cors',
+                   cache: 'default',
+                   body: JSON.stringify({descricao: tarefa, imagem: '', id: tarefaID})
+                };
+
+    fetch("http://localhost:8080/senac-js-2201/aula14/app/api/v1/tarefa.php",myInit).then(function(resultado){
+        return resultado.text()
+    }).then(function(conteudo){
+        console.log(conteudo)
+    })
+}
+
+atualizaTarefaNoBack('teste de atualizacao 45', 45)
+
+
+
+
 function gravaTarefaDentroLocalStorage(tarefa){
 
     let tarefas
