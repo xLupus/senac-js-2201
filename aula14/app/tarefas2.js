@@ -47,9 +47,32 @@ function adicionaTarefa(event){
         LISTA.appendChild(LI)
 
         gravaTarefaDentroLocalStorage(CAMPO_TAREFA)
-
+        gravaTarefaNoback(CAMPO_TAREFA)
         CAMPO_TAREFA.value = ''
     }
+
+}
+function gravaTarefaNoback(tarefa){
+    
+    console.log(tarefa.value)
+
+    let myInit = { method: 'POST',
+                   headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                            },
+                   mode: 'cors',
+                   cache: 'default',
+                   body: JSON.stringify({descricao: tarefa.value, imagem: ''})
+                };
+
+    
+    fetch("http://localhost:8080/senac-js-2201/aula14/app/api/v1/tarefa.php",myInit).then(function(resultado){
+        return resultado.text()
+    }).then(function(conteudo){
+        console.log(conteudo)
+    })
+
 
 }
 function gravaTarefaDentroLocalStorage(tarefa){
@@ -72,7 +95,7 @@ function pegaTarefa(){
 
     $.ajax({
         type: "GET",
-        url: "http://localhost:8080/app/api/v1/tarefa.php",
+        url: "http://localhost:8080/senac-js-2201/aula14/app/api/v1/tarefa.php",
         dataType: "json",
         success: function(result){
             
